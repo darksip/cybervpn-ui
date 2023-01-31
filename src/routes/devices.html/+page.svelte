@@ -42,14 +42,14 @@
 			<table>
 				<tr
 					><td
-						><!-- device creation visibility button -->
+						><!-- device creation visibility button 
 						<div class="p-4">
 							{#if newDeviceCardVisible == false}
 								<button on:click={() => (newDeviceCardVisible = true)} class="btn btn-primary btn-xs capitalize" type="button">+ New Device</button>
 							{:else}
 								<button on:click={() => (newDeviceCardVisible = false)} class="btn btn-secondary btn-xs capitalize" type="button">- Hide New Device</button>
 							{/if}
-						</div></td
+						</div>--></td
 					><td><SortDevices /></td><td><SearchDevices /></td></tr
 				>
 			</table>
@@ -64,7 +64,7 @@
 		{/if}
 		{#if $apiTestStore === 'failed'}
 			<div in:fade class="max-w-lg  mx-auto p-4 border-4 text-sm text-base-content shadow-lg text-center">
-				<p>API test did not succeed.<br />Headscale might be down or API settings may need to be set<br />change server settings in the <a href="{base}/settings.html" class="link link-primary">settings</a> page</p>
+				<p>API test did not succeed.<br />Cyber Vpn might be down or API settings may need to be set<br />change server settings in the <a href="{base}/settings.html" class="link link-primary">settings</a> page</p>
 			</div>
 		{/if}
 	</div>

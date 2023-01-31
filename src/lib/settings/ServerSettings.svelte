@@ -35,11 +35,11 @@
 
 <form>
 	<h1 class="text-2xl bold text-primary mb-4">Server Settings</h1>
-	<label class="block text-secondary text-sm font-bold mb-2" for="url"> Headscale URL </label>
+	<label class="block text-secondary text-sm font-bold mb-2" for="url"> Cyber Vpn URL </label>
 	<input bind:value={$URLStore} class="form-input" type="url" pattern={String.raw`https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)`} placeholder="https://hs.yourdomain.com.au" />
-	<p class="text-xs text-base-content text-italics mb-8">URL for your headscale server instance</p>
+	<p class="text-xs text-base-content text-italics mb-8">URL for your Cyber Vpn server instance</p>
 	<label class="block text-secondary text-sm font-bold mb-2" for="password">
-		Headscale API Key
+		Cyber Vpn API Key
 		{#if apiStatus == 'succeeded'}
 			{#key $APIKeyStore}
 				<ApiKeyTimeLeft />
@@ -70,7 +70,7 @@
 		</button>
 		<RolloverApi {apiStatus} />
 	</div>
-	<p class="text-xs text-base-content text-italics mb-8">Generate an API key for your headscale instance and place it here.</p>
+	<p class="text-xs text-base-content text-italics mb-8">Generate an API key for your Cyber Vpn instance and place it here.</p>
 	{#if apiStatus != 'succeeded'}
 		<button on:click={() => {TestServerSettings()}} class="btn btn-sm btn-secondary capitalize" type="button">Save API Key</button>
 	{:else}
