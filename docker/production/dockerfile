@@ -1,14 +1,14 @@
 # arguments
 ARG VERSION="master"
 # Branch to check out
-ARG CHECKOUT_BRANCH="master"
+ARG CHECKOUT_BRANCH="newrebrand"
 
 FROM node:lts AS build
 
 #environment variables
-ENV PROJECT_NAME="headscale-ui"
+ENV PROJECT_NAME="cybervpn-ui"
 # URL for the github/git location
-ENV PROJECT_URL="https://github.com/gurucomputing/headscale-ui"
+ENV PROJECT_URL="https://github.com/darksip/cybervpn-ui"
 
 # Set the staging environment
 WORKDIR /staging/scripts
@@ -33,9 +33,9 @@ RUN /staging/scripts/1-image-build.sh
 FROM alpine:latest
 
 #environment variables
-ENV PROJECT_NAME="headscale-ui"
+ENV PROJECT_NAME="cybervpn-ui"
 # URL for the github/git location
-ENV PROJECT_URL="https://github.com/gurucomputing/headscale-ui"
+ENV PROJECT_URL="https://github.com/darksip/cybervpn-ui"
 # Ports that caddy will run on
 ENV HTTP_PORT="80"
 ENV HTTPS_PORT="443"
