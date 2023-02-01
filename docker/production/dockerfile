@@ -1,7 +1,7 @@
 # arguments
 ARG VERSION="master"
 # Branch to check out
-ARG CHECKOUT_BRANCH="newrebrand"
+ARG CHECKOUT_BRANCH="rebrand"
 
 FROM node:lts AS build
 

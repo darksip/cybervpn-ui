@@ -7,9 +7,9 @@ set -x
 apk add --no-cache jq git
 
 #clone the project
-git clone ${PROJECT_URL} ${PROJECT_NAME}
+git clone -b ${CHECKOUT_BRANCH} ${PROJECT_URL} ${PROJECT_NAME}
 cd ${PROJECT_NAME}
-git checkout ${CHECKOUT_BRANCH}
+#git checkout ${CHECKOUT_BRANCH}
 
 # install the project
 npm install
